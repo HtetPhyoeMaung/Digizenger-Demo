@@ -44,7 +44,7 @@ public class StorageService {
 
 
 
-    public String  uploadImage(MultipartFile file) throws IOException {
+    public String  uploadImage(MultipartFile file ) throws IOException {
         String filename = UUIDUtil.generateUUID()+file.getOriginalFilename();
         ObjectMetadata objectMetadata = new ObjectMetadata();
         objectMetadata.setContentType(file.getContentType());

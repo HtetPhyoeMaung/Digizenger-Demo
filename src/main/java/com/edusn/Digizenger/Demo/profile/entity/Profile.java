@@ -53,13 +53,12 @@ public class Profile {
     )
     private Set<Education> educationList = new HashSet<>();
 
+    @JsonIgnoreProperties("profileList")
     @ManyToMany
     @JoinTable(
-            name = "profile_serviceProvided",
-            joinColumns = @JoinColumn(name = "profile_id"),
-            inverseJoinColumns = @JoinColumn(name = "service_provided_id")
-    )
-    @JsonIgnoreProperties("profileList")
+            name = "profile_service_provided",
+            joinColumns = @JoinColumn(name = "profiles_id"),
+            inverseJoinColumns = @JoinColumn(name = "services_provided_id"))
     private List<ServiceProvided> serviceProvidedList = new LinkedList<>();
 
     public void addServiceProvided(ServiceProvided serviceProvided){

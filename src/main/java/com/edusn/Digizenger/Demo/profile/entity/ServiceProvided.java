@@ -11,7 +11,7 @@ import java.util.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "servicesProvided")
+@Table(name = "services_provided")
 public class ServiceProvided {
 
     @Id
